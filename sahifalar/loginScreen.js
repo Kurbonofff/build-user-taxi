@@ -31,6 +31,10 @@ export default function LoginScreen() {
         <TouchableOpacity style={styles.buttonn} onPress={() => navigation.push('SignUp')} >
           <Text style={styles.buttonOutlineText}>Ro'yxatdan o'tish</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity style={styles.buttonn} onPress={() => navigation.push('Home')} >
+          <Text style={styles.buttonOutlineText}>Home</Text>
+        </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>
   );
