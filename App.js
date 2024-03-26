@@ -2,7 +2,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './sahifalar/loginScreen';
 import SignUp from './sahifalar/signUpScreen';
-import { HomeScreen } from './sahifalar/homeScreen';
+import HomeScreen from './sahifalar/homeScreen';
+
 
 
 
