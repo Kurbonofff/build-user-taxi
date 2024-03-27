@@ -24,7 +24,7 @@ return (
       />
       <TextInput
         placeholder="Call"
-       
+        
         style={styles.input}
       />
     </View>

@@ -7,6 +7,7 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
+  Pressable,
 } from "react-native";
 
 
@@ -32,9 +33,9 @@ export default function LoginScreen() {
           <Text style={styles.buttonOutlineText}>Ro'yxatdan o'tish</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.buttonn} onPress={() => navigation.push('Home')} >
+        <Pressable style={styles.buttonn} onPress={() => navigation.push('Home')} >
           <Text style={styles.buttonOutlineText}>Home</Text>
-        </TouchableOpacity>
+        </Pressable>
       </View>
     </KeyboardAvoidingView>
   );
