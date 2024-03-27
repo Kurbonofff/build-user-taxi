@@ -8,11 +8,16 @@ import { Entypo } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import * as Location from 'expo-location';
+import { SimpleLineIcons } from '@expo/vector-icons';
+import { useNavigation } from "@react-navigation/native";
+import { DriverScreen } from "./driverScreen";
+
+
 const myLocation = { latitude: 39.93088, longitude: 64.377800 };
 const tariffs = [
     {
         id:1,
-        Name:'start',
+        Name:'Start',
         price: '4.000'
     },
     {
@@ -22,13 +27,13 @@ const tariffs = [
     },
     {
         id:3,
-        Name:'Bussines',
+        Name:'Business',
         price: '10.000',
        
     }
 ]
 export function HomeScreen() {
-
+    const navigation = useNavigation();
     const [currentLocation, setCurrentLocation] = React.useState(null);
     const [location, setLocation] = React.useState(null);
     const mapRef = React.useRef(null);
@@ -64,7 +69,7 @@ export function HomeScreen() {
         }}
       />
       <View style={styles.point}>
-      <MaterialCommunityIcons name="google-maps" size={44} color="#0782F9" />
+      <MaterialCommunityIcons name="google-maps" size={54} color="#000" />
       </View>
       <Pressable onPress={() => {
         getCurrentLocation();
@@ -81,6 +86,21 @@ export function HomeScreen() {
       }}>
       <FontAwesome5 name="location-arrow" size={30} color="black" />
       </Pressable>
+      <Pressable onPress={()=> navigation.push('Profile')} style={{
+        position:"absolute",
+        width:50,
+        height:50,
+        backgroundColor:'#fff',
+        alignItems:'center',
+        justifyContent:'center',
+        borderRadius:10,
+        right:10,
+        bottom:'86%',
+      }}>
+      <SimpleLineIcons name="menu" size={24} color="black" />
+      </Pressable>
+        <DriverScreen/>
+
       <View style={styles.buttonBottom}>
             <Pressable style={styles.startPoint}>
             <Entypo name="circle" size={16} color="#0782F9" />

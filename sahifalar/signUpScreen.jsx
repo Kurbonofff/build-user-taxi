@@ -12,6 +12,8 @@ import {
 
 export default function SignUp() {
   const navigation = useNavigation();
+
+  const [email , setEmail] = React.useState();
 return (
   <KeyboardAvoidingView style={styles.container} behavior="padding">
     <Text style={styles.textTop}>Ro'yxatdan o'tish </Text>
@@ -24,7 +26,7 @@ return (
       />
       <TextInput
         placeholder="Call"
-        
+        onChangeText={email}
         style={styles.input}
       />
     </View>
